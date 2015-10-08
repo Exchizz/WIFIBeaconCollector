@@ -30,9 +30,12 @@ class WifiCollector:
 
 		self.lookForMac_list = []
 
-		self.rawSocket = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.htons(0x0003))
-		self.rawSocket.bind((interface, 0x0003))
-
+		try:
+			self.rawSocket = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.htons(0x0003))
+			self.rawSocket.bind((interface, 0x0003))
+		except:
+			print "Unable to connect to interface: ", interface
+			exit(1)
 	'''
 	Look for a specific MAC-Address. If not specified, the class will publish all received beacons
 	'''
@@ -58,6 +61,7 @@ class WifiCollector:
 			return Beacon(0,0,0,False)
 
 wificollector = WifiCollector("mon0")
+wificollector.setLookForMac("c0eefb4abd26") # Anders' Phone
 
 rospy.init_node('WifiBeaconCollector')
 pub_beacon = rospy.Publisher('/WifiBeaconCollector/beacons', BeaconMsg, queue_size=10)
@@ -69,4 +73,5 @@ while not rospy.is_shutdown():
 		msg.header.stamp = rospy.Time.now()
 		msg.essid = beacon.essid
 		msg.mac = beacon.mac
+		msg.signal = beacon.signal
 		pub_beacon.publish(msg)
