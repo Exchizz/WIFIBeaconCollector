@@ -16,13 +16,13 @@ sudo ifconfig mon0 up
 ```
 
 When starting the node, make sure to run it as root.
-sudo rosrun probably won't work. Instead write
+sudo rosrun probably won't work. Instead use
 ```
 sudo -s
 ```
 Then run the node using rosrun.
 
-If the node is included in a launch-file, it can be run using the same procedure as above (sudo -s then roslaunch )
+If the node is included in a launch-file, it can be run using the same procedure as above (sudo -s then roslaunch ... )
 
 This way of running the node is not ideal, I still haven't found a better way of doing it.
 
