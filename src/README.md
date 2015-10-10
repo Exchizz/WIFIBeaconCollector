@@ -1,6 +1,7 @@
 # WIFIBeaconCollector
 Collects beacon frames from avaiable AP's
 
+![alt tag](http://62.198.213.50:8080/job/WIFICollectorNode/badge/icon)
 
 This is a small node that collects beacons from available access points and publishes them on a topic.
 
