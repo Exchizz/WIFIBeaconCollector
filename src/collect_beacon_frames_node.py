@@ -60,7 +60,7 @@ class WifiCollector:
 		else:
 			return Beacon(0,0,0,False)
 
-wificollector = WifiCollector("mon0")
+wificollector = WifiCollector("wlan0")
 wificollector.setLookForMac("c0eefb4abd26") # Anders' Phone
 
 rospy.init_node('WifiBeaconCollector')

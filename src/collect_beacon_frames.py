@@ -5,7 +5,7 @@ import time
 lookForMac = ''
 
 rawSocket = socket.socket(socket.AF_PACKET, socket.SOCK_RAW, socket.htons(0x0003))
-rawSocket.bind(("mon0", 0x0003))
+rawSocket.bind(("wlan0", 0x0003))
 
 count = 200
 
