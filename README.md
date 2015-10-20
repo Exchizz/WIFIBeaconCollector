@@ -27,18 +27,21 @@ This way of running the node is not ideal, I still haven't found a better way of
 
 
 Afterwards, let the network manager manage the wireless lan card:
+```
 $ sudo ifconfig wlan0 down
 $ sudo sudo service network-manager start 
 $ sudo iwconfig wlan0 mode managed
 $ sudo ifconfig wlan0 up
-
+```
 
 To change the frequency to monitor:
+```
 $ sudo iwconfig wlan0 channel <1,2,..,N>
-
+```
 For example:
+```
 $ sudo iwconfig wlan0 channel 2
-
+```
 Here N is the number of possible to channels which can be listed using iwlist.
 
 
