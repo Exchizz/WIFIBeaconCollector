@@ -44,9 +44,6 @@ def processOdometry(odometry):
 def listener():
     rospy.Subscriber("/fmKnowledge/pose", Odometry, processOdometry)#type nav_msgs/Odometry
 
-    # spin() simply keeps python from exiting until this node is stopped
-    #rospy.spin()
-
 def talker():
     rate = rospy.Rate(10) # Hz
     publisher = rospy.Publisher("points", Marker, queue_size=10)
