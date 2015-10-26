@@ -44,40 +44,45 @@ def processOdometry(odometry):
 def listener():
     rospy.Subscriber("/fmKnowledge/pose", Odometry, processOdometry)#type nav_msgs/Odometry
 
+
+def publishRoute(publisher):
+    #publish marker
+    points = Marker()
+    points.header.frame_id = "/map";
+    points.header.stamp = rospy.Time.now()
+    points.ns = "points_and_lines";
+    points.action = Marker.ADD;
+    points.pose.orientation.w = 1.0;
+    points.id = 0;
+
+    points.type = Marker.POINTS;
+
+    # POINTS markers use x and y scale for width/height respectively
+    points.scale.x = 0.2;
+    points.scale.y = 0.2;
+
+    # Points are green
+    points.color.g = 1.0;
+    points.color.a = 1.0;
+
+    # Create the vertices for the points and lines
+    for r in positionList:
+        p = Point();
+        p.x = r.x
+        p.y = r.y
+        p.z = r.z
+        points.points.append(p)
+
+    # write to topic
+    publisher.publish(points)
+
+
 def talker():
     rate = rospy.Rate(10) # Hz
-    publisher = rospy.Publisher("points", Marker, queue_size=10)
+    positionPublisher = rospy.Publisher("points", Marker, queue_size=10)
     while not rospy.is_shutdown():
-        #publish marker
-        points = Marker()
-        points.header.frame_id = "/map";
-        points.header.stamp = rospy.Time.now()
-        points.ns = "points_and_lines";
-        points.action = Marker.ADD;
-        points.pose.orientation.w = 1.0;
-        points.id = 0;
-
-        points.type = Marker.POINTS;
-
-        # POINTS markers use x and y scale for width/height respectively
-        points.scale.x = 0.2;
-        points.scale.y = 0.2;
-
-        # Points are green
-        points.color.g = 1.0;
-        points.color.a = 1.0;
-
-        # Create the vertices for the points and lines
-        for r in positionList:
-            p = Point();
-            p.x = r.x
-            p.y = r.y
-            p.z = r.z
-            points.points.append(p)
-
-        publisher.publish(points)
+        publishRoute(positionPublisher)
         rate.sleep()
-
 if __name__ == '__main__':
     rospy.init_node('fuser')
     listener()
