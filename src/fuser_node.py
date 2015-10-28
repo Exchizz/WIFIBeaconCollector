@@ -1,5 +1,6 @@
 #!/usr/bin/env python
-import socket 
+import socket
+import random 
 import rospy
 
 '''
@@ -20,6 +21,7 @@ from std_msgs.msg import ColorRGBA
 # List of collected data
 positionList = [] # time,x,y,z
 beaconList = [] # time,strength,mac,essi
+beaconLists = {} # mac->time,strength,mac,essi
 
 class PosRecord:
     def __init__(self, t_sec, t_nsec, x, y, z):
@@ -65,8 +67,14 @@ def processBeacon(beacon):
     else:
         x, y = positionList[-1].x, positionList[-1].y
     bRec.setPos(x, y)
-    beaconList.append( bRec ) 
-    ##rospy.loginfo(rospy.get_caller_id() + " %s", beacon)
+    beaconList.append(bRec)
+
+    if beacon.mac in beaconLists:
+        beaconLists[beacon.mac].append(bRec)
+    else:
+        beaconLists[beacon.mac] = [bRec]
+
+    #rospy.loginfo(rospy.get_caller_id() + " %s", beaconLists.keys())
 
 
 def listener():
@@ -104,42 +112,54 @@ def publishRoute(publisher):
     # write to topic
     publisher.publish(points)
 
+colorMap = {}
+def getColorForMac(mac):
+    if mac in colorMap:
+        return colorMap[mac]
+    else:
+        r = random.uniform(0,1)
+        b = random.uniform(0,1)
+        g = random.uniform(0,1)
+        colorMap[mac]=ColorRGBA(r, g, b, 1.0)
+
 def publishSignalStrength(publisher):
-    #publish marker
-    points = Marker()
-    points.header.frame_id = "/map";
-    points.header.stamp = rospy.Time.now()
-    points.ns = "points_and_lines";
-    points.action = Marker.ADD;
-    points.pose.orientation.w = 1.0;
-    points.id = 0;
+    for mac in beaconLists:
+        l = beaconLists[mac]
+        #publish markers
+        points = Marker()
+        points.header.frame_id = "/map";
+        points.header.stamp = rospy.Time.now()
+        points.ns = "points_and_lines";
+        points.action = Marker.ADD;
+        points.pose.orientation.w = 1.0;
+        points.id = 0;
 
-    points.type = Marker.POINTS;
+        points.type = Marker.POINTS;
 
-    # POINTS markers use x and y scale for width/height respectively
-    points.scale.x = 0.2;
-    points.scale.y = 0.2;
+        # POINTS markers use x and y scale for width/height respectively
+        points.scale.x = 0.2;
+        points.scale.y = 0.2;
 
-    # Points color
-    points.color = ColorRGBA(1.0, 0.0, 0.0, 0.6)
+        # Points color
+        points.color = getColorForMac(mac)
 
-    # Create the vertices for the points and lines
-    for b in beaconList:
-        p = Point();
-        p.x = b.x
-        p.y = b.y
-        p.z = b.strength
-        points.points.append(p)
+        # Create the vertices for the points and lines
+        for b in l:
+            p = Point();
+            p.x = b.x
+            p.y = b.y
+            p.z = b.strength
+            points.points.append(p)
 
-    # write to topic
-    publisher.publish(points)
+        # write to topic
+        publisher.publish(points)
 
 
 def talker():
     rate = rospy.Rate(10) # Hz
     while not rospy.is_shutdown():
         publishRoute(rospy.Publisher("route", Marker, queue_size=10))
-        publishSignalStrength(rospy.Publisher("signal", Marker, queue_size=10))
+        publishSignalStrength(rospy.Publisher("signal", Marker, queue_size=100))
         rate.sleep()
 
 if __name__ == '__main__':
