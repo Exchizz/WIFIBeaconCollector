@@ -114,13 +114,12 @@ def publishRoute(publisher):
 
 colorMap = {}
 def getColorForMac(mac):
-    if mac in colorMap:
-        return colorMap[mac]
-    else:
+    if mac not in colorMap:
         r = random.uniform(0,1)
         b = random.uniform(0,1)
         g = random.uniform(0,1)
         colorMap[mac]=ColorRGBA(r, g, b, 1.0)
+    return colorMap[mac]
 
 def publishSignalStrength(publisher):
     for mac in beaconLists:
