@@ -2,16 +2,14 @@
 <package>
   <name>WIFIBeaconCollector</name>
   <version>0.0.0</version>
-  <description>The frobit_demo package</description>
+  <description>Wifi collection package</description>
 
-  <maintainer email="kjeld@frobomind.org">Kjeld Jensen</maintainer>
-  <url type="website">http://www.frobomind.org</url>
+  <maintainer email="mortenalbecknielsen@gmail.com">Morten Albeck Nielsen</maintainer>
   <license>BSD 3-Clause</license>
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>roscpp</build_depend>
   <build_depend>rospy</build_depend>
-  <run_depend>msgs</run_depend>
   <run_depend>roscpp</run_depend>
   <run_depend>rospy</run_depend>
  <build_depend>message_generation</build_depend>
