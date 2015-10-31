@@ -3,6 +3,9 @@ import socket
 import random 
 import rospy
 
+from multiprocessing import Lock
+mutex = Lock()
+
 '''
 Requires root permission to run..
 sudo su root
@@ -58,23 +61,24 @@ class BeaconRecord():
         self.y = y
 
 def processBeacon(beacon):
-    t_sec = beacon.header.stamp.secs
-    t_nsec = beacon.header.stamp.nsecs
-    bRec = BeaconRecord(t_sec, t_nsec, beacon.signal, beacon.mac, beacon.essid)
+    with mutex:
+        t_sec = beacon.header.stamp.secs
+        t_nsec = beacon.header.stamp.nsecs
+        bRec = BeaconRecord(t_sec, t_nsec, beacon.signal, beacon.mac, beacon.essid)
 
-    if len(positionList)==0: # empty
-        x, y = 0, 0
-    else:
-        x, y = positionList[-1].x, positionList[-1].y
-    bRec.setPos(x, y)
-    beaconList.append(bRec)
+        if len(positionList)==0: # empty
+            x, y = 0, 0
+        else:
+            x, y = positionList[-1].x, positionList[-1].y
+        bRec.setPos(x, y)
+        beaconList.append(bRec)
 
-    if beacon.mac in beaconLists:
-        beaconLists[beacon.mac].append(bRec)
-    else:
-        beaconLists[beacon.mac] = [bRec]
+        if beacon.mac in beaconLists:
+            beaconLists[beacon.mac].append(bRec)
+        else:
+            beaconLists[beacon.mac] = [bRec]
 
-    #rospy.loginfo(rospy.get_caller_id() + " %s", beaconLists.keys())
+        #rospy.loginfo(rospy.get_caller_id() + " %s", beaconLists.keys())
 
 
 def listener():
@@ -122,36 +126,37 @@ def getColorForMac(mac):
     return colorMap[mac]
 
 def publishSignalStrength(publisher):
-    for mac in beaconLists:
-        l = beaconLists[mac]
-        #publish markers
-        points = Marker()
-        points.header.frame_id = "/map";
-        points.header.stamp = rospy.Time.now()
-        points.ns = "points_and_lines";
-        points.action = Marker.ADD;
-        points.pose.orientation.w = 1.0;
-        points.id = 0;
+    with mutex:
+        for mac in beaconLists:
+            l = beaconLists[mac]
+            #publish markers
+            points = Marker()
+            points.header.frame_id = "/map";
+            points.header.stamp = rospy.Time.now()
+            points.ns = "points_and_lines";
+            points.action = Marker.ADD;
+            points.pose.orientation.w = 1.0;
+            points.id = 0;
 
-        points.type = Marker.POINTS;
+            points.type = Marker.POINTS;
 
-        # POINTS markers use x and y scale for width/height respectively
-        points.scale.x = 0.2;
-        points.scale.y = 0.2;
+            # POINTS markers use x and y scale for width/height respectively
+            points.scale.x = 0.2;
+            points.scale.y = 0.2;
 
-        # Points color
-        points.color = getColorForMac(mac)
+            # Points color
+            points.color = getColorForMac(mac)
 
-        # Create the vertices for the points and lines
-        for b in l:
-            p = Point();
-            p.x = b.x
-            p.y = b.y
-            p.z = b.strength
-            points.points.append(p)
+            # Create the vertices for the points and lines
+            for b in l:
+                p = Point();
+                p.x = b.x
+                p.y = b.y
+                p.z = b.strength
+                points.points.append(p)
 
-        # write to topic
-        publisher.publish(points)
+            # write to topic
+            publisher.publish(points)
 
 
 def talker():
