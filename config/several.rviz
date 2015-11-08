@@ -1,0 +1,982 @@
+Panels:
+  - Class: rviz/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Status1
+        - /Marker1
+      Splitter Ratio: 0.5
+    Tree Height: 359
+  - Class: rviz/Selection
+    Name: Selection
+  - Class: rviz/Tool Properties
+    Expanded:
+      - /2D Pose Estimate1
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.588679
+  - Class: rviz/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: ""
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Line Style:
+        Line Width: 0.03
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /route
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal08570008fb17
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d368230
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d368231
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d368232
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d368233
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d368234
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d368235
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d368236
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a0d0
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a0d4
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a0d5
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a0d6
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a130
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a131
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a132
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a133
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a134
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a135
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a136
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a9d0
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a9d1
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a9d2
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a9d3
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a9d4
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a9d5
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37a9d6
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37aa70
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37aa71
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37aa72
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37aa73
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37aa74
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37aa75
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d37aa76
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d3a9290
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d3a9291
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d3a9292
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d3a9293
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d3a9294
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d3a9295
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d3a9296
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d3a9500
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d3a9501
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d3a9502
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d3a9503
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d3a9504
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d3a9505
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d3a9506
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d4323b0
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d4323b1
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d4323b2
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d4323b3
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d4323b4
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d4323b5
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d4323b6
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432430
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432431
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432432
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432433
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432434
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432435
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432436
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432470
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432471
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432472
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432473
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432474
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432475
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432476
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432590
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432591
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432592
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432593
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432594
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432595
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d432596
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d48ab60
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d48ab61
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d48ab62
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d48ab63
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d48ab64
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d48ab65
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d48ab66
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56e7b0
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56e7b1
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56e7b2
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56e7b3
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56e7b4
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56e7b5
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56e7b6
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56eab0
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56eab1
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56eab2
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56eab3
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56eab4
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56eab5
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56eab6
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56ead0
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56ead1
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56ead2
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56ead3
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56ead4
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56ead5
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56ead6
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signal64f69d56ec25
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signalf07f06f339f3
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signalf07f06f339f4
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signalf07f06f339f5
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /signalf07f06f339f6
+      Name: Marker
+      Namespaces:
+        points_and_lines: true
+      Queue Size: 100
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz/Interact
+      Hide Inactive Objects: true
+    - Class: rviz/MoveCamera
+    - Class: rviz/Select
+    - Class: rviz/FocusCamera
+    - Class: rviz/Measure
+    - Class: rviz/SetInitialPose
+      Topic: /initialpose
+    - Class: rviz/SetGoal
+      Topic: /move_base_simple/goal
+    - Class: rviz/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz/Orbit
+      Distance: 94.0793
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.06
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: -23.4328
+        Y: -0.693881
+        Z: 63.2302
+      Name: Current View
+      Near Clip Distance: 0.01
+      Pitch: 0.499796
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 1.94541
+    Saved: ~
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 744
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd0000000400000000000001330000025efc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006400fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c00610079007300000000280000025e000000dd00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f0000025efc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a0056006900650077007300000000280000025e000000b000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000005150000003efc0100000002fb0000000800540069006d0065010000000000000515000002f600fffffffb0000000800540069006d00650100000000000004500000000000000000000005150000025e00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1301
+  X: 55
+  Y: -14

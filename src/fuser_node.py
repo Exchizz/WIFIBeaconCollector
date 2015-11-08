@@ -125,7 +125,7 @@ def getColorForMac(mac):
         colorMap[mac]=ColorRGBA(r, g, b, 1.0)
     return colorMap[mac]
 
-def publishSignalStrength(publisher):
+def publishSignalStrength():
     with mutex:
         for mac in beaconLists:
             l = beaconLists[mac]
@@ -156,14 +156,14 @@ def publishSignalStrength(publisher):
                 points.points.append(p)
 
             # write to topic
-            publisher.publish(points)
+            rospy.Publisher("signal"+str(mac), Marker, queue_size=100)  .publish(points)
 
 
 def talker():
     rate = rospy.Rate(10) # Hz
     while not rospy.is_shutdown():
         publishRoute(rospy.Publisher("route", Marker, queue_size=10))
-        publishSignalStrength(rospy.Publisher("signal", Marker, queue_size=100))
+        publishSignalStrength()
         rate.sleep()
 
 if __name__ == '__main__':
